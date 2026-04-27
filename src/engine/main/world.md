@@ -37,7 +37,7 @@ Initializes the world state, sets up references to the network and renderer, and
 ```ts
 function init(): void
 ```
-Binds the replicator's target tick callback to `onEntityUpdate`, initializes the replicator, registers the `EnterWorld` network handler, and adds a renderer tick callback.
+Binds the replicator's target tick callback to `onEntityUpdate`, initializes the replicator, registers a network handler for `PACKET_ENTER_WORLD2` which in reality is called `PACKET_ENTER_WORLD` and adds a renderer tick callback.
 
 #### `preloadNetworkEntities()`
 ```ts
@@ -148,13 +148,13 @@ Returns the number of pooled model instances available for the given model name.
 
 #### `onEnterWorld()`
 ```ts
-function onEnterWorld(data: EnterWorldData): void
+function onEnterWorld(data: ENTER_WORLD_DATA): void
 ```
 Handles the `EnterWorld` network event. If `allowed` is `false`, returns early. Otherwise sets `width`, `height`, `tickRate`, `msPerTick`, `inWorld`, and `myUid` from the response data.
 
 #### `onEntityUpdate()`
 ```ts
-function onEntityUpdate(data: { entities: Record<string, boolean | object> }): void
+function onEntityUpdate(data: ENTITY_DATA): void
 ```
 Handles replicator target tick updates. Iterates over current entities to remove or update them based on the incoming data, then creates any new entities. Also updates the local player's target tick if its entity is present.
 
