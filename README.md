@@ -54,16 +54,18 @@ src/
 │   └── overview.md
 ├── engine
 │   ├── main
+│   │   ├── input
+│   │   │   ├── inputManager.md
+│   │   │   ├── inputPacketCreator.md
+│   │   │   └── inputPacketScheduler.md
+│   │   ├── renderer
+│   │   │   └── renderer.md
 │   │   ├── ui
 │   │   │   ├── components
 │   │   │   │   ├── UiChat.md
 │   │   │   │   └── UiComponent.md
 │   │   │   └── ui.md
-│   │   ├── inputManager.md
-│   │   ├── inputPacketCreator.md
-│   │   ├── inputPacketScheduler.md
 │   │   ├── network.md
-│   │   ├── renderer.md
 │   │   └── world.md
 │   ├── utils
 │   │   ├── assetManager.md
@@ -71,7 +73,8 @@ src/
 │   │   ├── metrics.md
 │   │   ├── platform.md
 │   │   └── util.md
-│   └── overview.md
+│   ├── overview.md
+│   └── schema.md
 ├── game
 │   └── buildings
 │       ├── arrow_tower.md
@@ -89,8 +92,6 @@ src/
 ├── intro
 │   └── introduction.md
 ├── mbf
-│   ├── error_1.png
-│   ├── mbf.jpg
 │   └── overview.md
 ├── misc
 │   └── records.md
