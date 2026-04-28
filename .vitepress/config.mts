@@ -179,7 +179,7 @@ export default defineConfig({
               { text: "Tower Nerf", link: "/bugs/inactive/tower_nerf.md" },
               {
                 text: "Undying Zombies",
-                link: "/bugs/active/undying_zombs.md",
+                link: "/bugs/inactive/undying_zombs.md",
               },
             ],
             collapsed: true,
