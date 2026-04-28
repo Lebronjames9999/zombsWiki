@@ -76,15 +76,27 @@ export default defineConfig({
               },
               { text: "world", link: "/engine/main/world" },
               { text: "network", link: "/engine/main/network" },
-              { text: "renderer", link: "/engine/main/renderer" },
-              { text: "inputManager", link: "/engine/main/inputManager" },
               {
-                text: "inputPacketCreator",
-                link: "/engine/main/inputPacketCreator",
+                text: "renderer",
+                items: [
+                  { text: "renderer", link: "/engine/main/renderer/renderer" },
+                ],
+                collapsed: true,
               },
               {
-                text: "inputPacketScheduler",
-                link: "/engine/main/inputPacketScheduler",
+                text: "input",
+                items: [
+                  { text: "inputManager", link: "/engine/main/input/inputManager" },
+                  {
+                    text: "inputPacketCreator",
+                    link: "/engine/main/input/inputPacketCreator",
+                  },
+                  {
+                    text: "inputPacketScheduler",
+                    link: "/engine/main/input/inputPacketScheduler",
+                  },
+                ],
+                collapsed: true,
               },
             ],
             collapsed: true,
@@ -100,6 +112,7 @@ export default defineConfig({
             ],
             collapsed: true,
           },
+          { text: "Schemas", link: "/engine/schema" },
         ],
       },
       {

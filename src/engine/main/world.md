@@ -164,7 +164,7 @@ function onRendererTick(delta: number): void
 ```
 Called each renderer frame. Ticks all entities with the current interpolation progress from the replicator.
 
-## `LocalPlayer`
+## `LocalPlayer` <Badge type="danger" text="private" />
 
 The `LocalPlayer` class represents the client's own player within the world. It holds a reference to the player's `NetworkEntity`.
 
@@ -194,7 +194,7 @@ function setTargetTick(tick: object): void
 ```
 Forwards the given tick data to the UI via `game.ui.setPlayerTick()`.
 
-## `Replication`
+## `Replication` <Badge type="danger" text="private" />
 
 The `Replication` class drives client-side entity interpolation and extrapolation. It maintains a queue of server ticks, advances a local clock (`shiftedGameTime`) each renderer frame, and fires callbacks when the client time crosses a tick boundary. It also tracks diagnostics such as FPS, frame stutters, extrapolation incidents, and client-server time desync.
 
