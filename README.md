@@ -170,7 +170,30 @@ src/public/
 ├── asset
 │   ├── bugs
 │   │   ├── 1.1_rock.png
-│   │   └── 1.2_spotinfo.png
+│   │   ├── 1.2_spotinfo.png
+│   │   ├── 2.1_weird_spawn.png
+│   │   ├── 2.2_weird_spawn_again.png
+│   │   ├── 3.1_no_zombs.png
+│   │   ├── 4.1_tower_buff_proj.png
+│   │   ├── 4.2_buffed_env.png
+│   │   ├── 4.3_buffed_corner.png
+│   │   ├── 4.4_newbie.png
+│   │   ├── 4.5_woodybuff.png
+│   │   ├── 4.6_deathscore.png
+│   │   ├── 4.7_erokscore.png
+│   │   ├── 4.8_lowspw.png
+│   │   ├── 4.9_deathwave.png
+│   │   ├── 5.1_healing_carl.png
+│   │   ├── 5.2_healing_carl.png
+│   │   ├── 6.1_t9_heal.png
+│   │   ├── 6.2_t1033_heal.png
+│   │   ├── 7.1_undead_pile.png
+│   │   ├── 7.2_boss.png
+│   │   ├── 7.3_4_colours.png
+│   │   ├── 7.4_graph1.png
+│   │   ├── 7.5_graph2.png
+│   │   ├── 7.6_zombies.png
+│   │   └── 7.7_nohp.png
 │   ├── engine
 │   │   ├── buildings.json
 │   │   ├── entities.json
