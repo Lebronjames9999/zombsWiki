@@ -49,7 +49,8 @@ src/
 ├── bugs
 │   ├── active
 │   │   ├── odd_zombie_spawn.md
-│   │   └── rss_go_poof.md
+│   │   ├── rss_go_poof.md
+│   │   └── undying_zombs.md
 │   ├── inactive
 │   │   ├── blank_wave.md
 │   │   ├── carl_healing.md
