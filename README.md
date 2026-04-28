@@ -118,7 +118,6 @@ src/
 │   │   │   ├── inputPacketCreator.md
 │   │   │   └── inputPacketScheduler.md
 │   │   ├── renderer
-│   │   │   ├── entities
 │   │   │   └── renderer.md
 │   │   ├── ui
 │   │   │   ├── components
