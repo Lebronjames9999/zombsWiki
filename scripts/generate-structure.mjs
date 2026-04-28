@@ -9,9 +9,7 @@ const SRC_DIR = path.resolve(__dirname, "../src");
 const PUBLIC_DIR = path.resolve(SRC_DIR, "public");
 const README_PATH = path.resolve(__dirname, "../README.md");
 
-const IGNORED_PATHS = [
-  path.resolve(PUBLIC_DIR, "asset/image"),
-];
+const IGNORED_PATHS = [path.resolve(PUBLIC_DIR, "asset/image")];
 
 function generateTree(dir, ignorePaths = [], depth = 0, prefix = "") {
   const items = fs
@@ -35,7 +33,12 @@ function generateTree(dir, ignorePaths = [], depth = 0, prefix = "") {
 
     if (item.isDirectory()) {
       const newPrefix = prefix + (isLast ? "    " : "│   ");
-      output += generateTree(path.join(dir, item.name), ignorePaths, depth + 1, newPrefix);
+      output += generateTree(
+        path.join(dir, item.name),
+        ignorePaths,
+        depth + 1,
+        newPrefix,
+      );
     }
   });
   return output;
@@ -46,7 +49,9 @@ function replaceCodeBlock(readme, sectionHeading, content) {
     `(${sectionHeading}[\\s\\S]*?\`\`\`)[\\s\\S]*?(\`\`\`)`,
   );
   if (!regex.test(readme)) {
-    console.error(`Could not find "${sectionHeading}" section with a code block in README.md`);
+    console.error(
+      `Could not find "${sectionHeading}" section with a code block in README.md`,
+    );
     return readme;
   }
   return readme.replace(regex, `$1\n${content}$2`);
