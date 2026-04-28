@@ -86,7 +86,10 @@ export default defineConfig({
               {
                 text: "input",
                 items: [
-                  { text: "inputManager", link: "/engine/main/input/inputManager" },
+                  {
+                    text: "inputManager",
+                    link: "/engine/main/input/inputManager",
+                  },
                   {
                     text: "inputPacketCreator",
                     link: "/engine/main/input/inputPacketCreator",
