@@ -20,7 +20,7 @@ The core function `zombs_wasm.wasm` exposes is called `_MakeBlendField`. From no
 
 ## Summary
 
-![mbf](/asset/mbf/mbf.jpg)
+![mbf](/asset/mbf/overview/mbf.jpg)
 
 When the client receives an opcode `5` / `10` packet, it has to decode it with `BinCodec` and send back the required data. For opcode `5`, the data will be sent along opcode `4` and `6` packets, while for opcode `10`, a separate opcode `10` packet will be sent. If the client fails to submit data that passes validation in the given time, the client will not be able to enter the server and therefore will be forcefully disconnected from the server.
 
@@ -82,7 +82,7 @@ The steps are described below (every array is a 0-indexed byte array):
 
 When the zombs.io website client tries to connect to a server whose IPv4 address is shorter than one that the client tried before, it throws the error shown below because the `_free()` function isn't exported in `zombs_wasm.wasm`. Fix this by adding `func $6` in `zombs_wasm.wasm` (which is the `free()` function in C++) to the exports. For custom clients instantiating `zombs_wasm.wasm` each time they connect, this can be ignored.
 
-![error_1](/asset/mbf/error_1.png)
+![error_1](/asset/mbf/overview/error_1.png)
 
 ## Trivia
 
@@ -91,6 +91,6 @@ When the zombs.io website client tries to connect to a server whose IPv4 address
 
 ## Credits
 
-Article written by AstralCat   
-Preliminary research and base algorithm by ABCxff  
-In-depth reversal and algorithm revision by AstralCat
+- Article: AstralCat   
+- Preliminary research and base algorithm: ABCxff  
+- In-depth reversal and algorithm revision: AstralCat

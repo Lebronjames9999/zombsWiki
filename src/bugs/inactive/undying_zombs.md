@@ -5,7 +5,7 @@ Zombies have a specific mechanic so when the in game time goes to day, the zombi
 
 <div style="text-align:center;">
   <div style="display:inline-block; text-align:center; border:1px solid #666; padding:10px;">
-    <img src="/asset/bugs/7.7_nohp.png" style="width:300px; display:block; margin:0 auto;">
+    <img src="/asset/bugs/inactive/undying_zombs/nohp.png" style="width:300px; display:block; margin:0 auto;">
     <div>~0 HP zombies</div>
   </div>
 </div>
@@ -40,7 +40,7 @@ As an example, let's assume a zombie has 100HP, and has a 1% HP decay per tick, 
 
 <div style="text-align:center;">
   <div style="display:inline-block; text-align:center; border:1px solid #666; padding:10px;">
-    <img src="/asset/bugs/7.4_graph1.png" style="width:400px; display:block; margin:0 auto;">
+    <img src="/asset/bugs/inactive/undying_zombs/graph1.png" style="width:400px; display:block; margin:0 auto;">
     <div>Example: Zombie health loss over time.<br>x: tick, y: hp</div>
   </div>
 </div>
@@ -69,7 +69,7 @@ Once again, as an example, let's assume a zombie has 100HP, and has a 1% HP deca
 
 <div style="text-align:center;">
   <div style="display:inline-block; text-align:center; border:1px solid #666; padding:10px;">
-    <img src="/asset/bugs/7.5_graph2.png" style="width:400px; display:block; margin:0 auto;">
+    <img src="/asset/bugs/inactive/undying_zombs/graph2.png" style="width:400px; display:block; margin:0 auto;">
     <div>Example: Zombie health loss over time.<br>x: tick, y: hp</div>
   </div>
 </div>
@@ -83,7 +83,7 @@ Once reaching 0 HP, the zombie or the boss dies. 🫡
 
 <div style="text-align:center;">
   <div style="display:inline-block; text-align:center; border:1px solid #666; padding:10px;">
-    <img src="/asset/bugs/7.1_undead_pile.png" style="width:400px; display:block; margin:0 auto;">
+    <img src="/asset/bugs/inactive/undying_zombs/undead_pile.png" style="width:400px; display:block; margin:0 auto;">
     <div>Large pile of zombies with ~0 HP</div>
   </div>
 </div>
@@ -94,7 +94,7 @@ Once reaching 0 HP, the zombie or the boss dies. 🫡
 
 <div style="text-align:center;">
   <div style="display:inline-block; text-align:center; border:1px solid #666; padding:10px;">
-    <img src="/asset/bugs/7.2_boss.png" style="width:300px; display:block; margin:0 auto;">
+    <img src="/asset/bugs/inactive/undying_zombs/boss.png" style="width:300px; display:block; margin:0 auto;">
     <div>A lot of bosses, and a green T1 zombie at purple waves.</div>
   </div>
 </div>
@@ -105,7 +105,7 @@ Once reaching 0 HP, the zombie or the boss dies. 🫡
 
 <div style="text-align:center;">
   <div style="display:inline-block; text-align:center; border:1px solid #666; padding:10px;">
-    <img src="/asset/bugs/7.3_4_colours.png" style="width:400px; display:block; margin:0 auto;">
+    <img src="/asset/bugs/inactive/undying_zombs/4_colours.png" style="width:400px; display:block; margin:0 auto;">
     <div>4 different zombie colours at the same base.</div>
   </div>
 </div>
@@ -119,7 +119,7 @@ This was used as a way to ruin someone's wave or score attempt, or simply just t
 
 <div style="text-align:center;">
   <div style="display:inline-block; text-align:center; border:1px solid #666; padding:10px;">
-    <img src="/asset/bugs/7.6_zombies.png" style="width:400px; display:block; margin:0 auto;">
+    <img src="/asset/bugs/inactive/undying_zombs/zombies.png" style="width:400px; display:block; margin:0 auto;">
     <div>Lag base at wave 27. Ping: +47 seconds<br>You can see all tiers of Green and Blue zombies.</div>
   </div>
 </div>
@@ -131,5 +131,5 @@ This was used as a way to ruin someone's wave or score attempt, or simply just t
 - Fix one method of pet invulnerability
 ---> Zombie day time damage is now based on % of max health instead of % of current health to fix max tier walls + low level waves from lagging out the server <---
 - Lower party change cooldown to 1 second from 15 seconds because the disconnection exploit has been fixed for a while now
-- Remove cooldowns for open party toggle and party names because the disconnection exploit has been fixed  for a while now
+- Remove cooldowns for open party toggle and party names because the disconnection exploit has been fixed for a while now
 ```

@@ -298,16 +298,17 @@ Encodes a ping packet.
 
 | Constant | Value | Description |
 | :--- | :--- | :--- |
-| `PACKET_ENTITY_UPDATE` | `0` | Received when entities in the world are updated. |
-| `PACKET_PLAYER_COUNTER_UPDATE` | `1` | Received when the player count changes. |
-| `PACKET_SET_WORLD_DIMENSIONS` | `2` | Received to set the world's boundaries. |
+| `PACKET_ENTITY_UPDATE` | `0` | Received every 50ms to update world entities. |
+| `PACKET_PLAYER_COUNTER_UPDATE` | `1` | Currently unused. |
+| `PACKET_SET_WORLD_DIMENSIONS` | `2` | Currently unused. |
 | `PACKET_INPUT` | `3` | Sent to the server containing player input. |
-| `PACKET_ENTER_WORLD` | `4` | Sent to request entry to the world; also received as a response. |
+| `PACKET_ENTER_WORLD` | `4` | Sent to request entry to the world & used by the anti-bot mechanism; also received as an enter world response. |
 | `PACKET_PRE_ENTER_WORLD` | `5` | Received before entering the world. |
-| `PACKET_ENTER_WORLD2` | `6` | Secondary world entry packet. |
+| `PACKET_ENTER_WORLD2` | `6` | Used by the anti-bot mechanism. Is sent to the server after entering world. |
 | `PACKET_PING` | `7` | Used for latency measurement. |
+| (no name set) | `8` | Supposedly used for skill points. See [Skill Points](/bugs/inactive/skill_point). |
 | `PACKET_RPC` | `9` | Used for Remote Procedure Calls (RPC). |
-| `PACKET_BLEND` | `10` | Used for internal obfuscation/validation. |
+| `PACKET_BLEND` | `10` | Used by the anti-bot mechanism. Is received and sent at irregular intervals while in world. |
 
 ### `e_AttributeType` <Badge type="danger" text="private" />
 

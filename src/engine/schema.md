@@ -97,4 +97,4 @@ Even though `Pause` / Timeout is a spell in the game, it is listed under Items, 
 
 ## Raw Schema
 
-You can find the raw schema for [buildings](/asset/engine/buildings.json), [entities](/asset/engine/entities.json), [items](/asset/engine/items.json) and [spells](/asset/engine/spells.json) by clicking on the highlights.
+You can find the raw schema for [buildings](/asset/engine/schema/buildings.json), [entities](/asset/engine/schema/entities.json), [items](/asset/engine/schema/items.json) and [spells](/asset/engine/schema/spells.json) by clicking on the highlights.

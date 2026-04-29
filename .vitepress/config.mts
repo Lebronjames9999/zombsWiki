@@ -181,6 +181,10 @@ export default defineConfig({
                 text: "Undying Zombies",
                 link: "/bugs/inactive/undying_zombs.md",
               },
+              {
+                text: "Skill Points",
+                link: "/bugs/inactive/skill_point.md",
+              },
             ],
             collapsed: true,
           },
