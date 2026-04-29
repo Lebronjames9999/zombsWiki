@@ -22,7 +22,7 @@ The core function `zombs_wasm.wasm` exposes is called `_MakeBlendField`. From no
 
 ![mbf](/asset/mbf/mbf.jpg)
 
-When the client receives opcode `5` / `10`, it has to decode the packet with `BinCodec` and send back the required data with opcode `4` and `6`. If the client fails to submit data that passes validation in the given time, the client will not be able to enter the server and therefore will be forcefully disconnected from the server.
+When the client receives an opcode `5` / `10` packet, it has to decode it with `BinCodec` and send back the required data. For opcode `5`, the data will be sent along opcode `4` and `6` packets, while for opcode `10`, a separate opcode `10` packet will be sent. If the client fails to submit data that passes validation in the given time, the client will not be able to enter the server and therefore will be forcefully disconnected from the server.
 
 ## Challenge
 
