@@ -126,6 +126,15 @@ src/
 │   │   │   ├── inputPacketCreator.md
 │   │   │   └── inputPacketScheduler.md
 │   │   ├── renderer
+│   │   │   ├── entity_types
+│   │   │   │   ├── DrawEntity.md
+│   │   │   │   ├── Entity.md
+│   │   │   │   ├── GroundEntity.md
+│   │   │   │   ├── ModelEntity.md
+│   │   │   │   ├── NetworkEntity.md
+│   │   │   │   ├── SpriteEntity.md
+│   │   │   │   └── TextEntity.md
+│   │   │   ├── EntityGrid.md
 │   │   │   └── renderer.md
 │   │   ├── ui
 │   │   │   ├── components
