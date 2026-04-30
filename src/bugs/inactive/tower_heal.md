@@ -12,7 +12,9 @@ If you sent an RPC for `HealTowersSpell` but with a different tier, there would 
 
 ## Cause
 
-"The reason the tower heal bug worked was because of the low level language that the game is made in. The data type that was meant to be in the tier is capped at 8, therefore anything in that limit works normally and anything over that breaches other parts of the server. If the tier was in a list of specific numbers, the leakage would affect other things like cost, radius, any many others. A tier being too high would cause total failure in the server." - explains a community member, [Apex](https://www.youtube.com/@Apex-ti1dm).
+> The reason the tower heal bug worked was because of the low level language that the game is made in. The data type that was meant to be in the tier is capped at 8, therefore anything in that limit works normally and anything over that breaches other parts of the server. If the tier was in a list of specific numbers, the leakage would affect other things like cost, radius, any many others. A tier being too high would cause total failure in the server.
+
+Explains a community member, [Apex](https://www.youtube.com/@Apex-ti1dm).
 
 ## Examples
 

@@ -18,6 +18,44 @@ The main algorithm of the PoW process is written in C++ and compiled into `zombs
 
 The core function `zombs_wasm.wasm` exposes is called `_MakeBlendField`. From now on, for convenience, `_MakeBlendField` will be referred to as MBF, and `PACKET_PRE_ENTER_WORLD`, `PACKET_ENTER_WORLD`, `PACKET_ENTER_WORLD2` and `PACKET_BLEND` will be accordingly referred to as opcode `5`, `4`, `6` and `10`.
 
+## History
+
+### April 24, 2021 - Minor Update
+```md{3}
+- Fix towers slowing down after some time due to floating point loss of precision
+- Add a challenge / response system to help cut down on bot connections
+- Harden game servers a bit against DoS attacks
+```
+MBF first appeared with this update, along with a WASM module to solve the new validation challenge. At this time, the validation process only employs a single challenge via opcode `5`.
+
+> The way entering servers works has changed. Before:
+> 1. You send a "PACKET_ENTER_WORLD" message (opcode 4) containing your name
+> 2. Server receives, checks data, then sends you a "PACKET_ENTER_WORLD" message (opcode 4) message allowing you in
+
+Explains a community member, [Apex](https://www.youtube.com/@Apex-ti1dm).
+
+### November 13, 2021 - Minor Update
+```md{4}
+- Fix invincible pet bug
+- Allow building over dead players and projectiles
+- Add a 10 second pet potting cooldown
+- Reduce bot flooding with challenge / response upgrades
+```
+MBF was upgraded with this update, introducing opcode `6` to the validation process, thus requiring the client to send opcode `6` upon entering the game.
+
+::: info
+
+There was a 25 use limit for the WASM module and a memory leak issue with it around this period, but it is unknown when the limit was removed or when the memory leak issue was fixed.
+
+:::
+
+### December 31, 2023 - Minor Update
+```md{1}
+- Security update
+```
+
+This update introduces opcode `10`.
+
 ## Summary
 
 ![mbf](/asset/mbf/overview/mbf.jpg)
