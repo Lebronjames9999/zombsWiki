@@ -106,7 +106,7 @@ The steps are described below (every array is a 0-indexed byte array):
 1. Randomly choose 2 bytes in the random pool and swap them.
 2. Pick another byte in the pool randomly and insert it into a random position of `random_buffer`.
 3. Set `random_buffer[10/11/12/13]` to `random_buffer[0/40/51/4] + random_buffer[23/25/50/45] + uid[0/1/2/3]` (`uid` is the player's uid expressed in a 32-bit integer) and `random_buffer[14/15/16/17]` to `random_buffer[41/22/35/39] ^ blend_field[0/1/2/3]`.
-4. Hash the payload to generate a digest and validate it to check if it matches the criteria. In this build, the check is implemented as a leading-zero-bit test: the first `<difficulty>` bits of the digest must all be zero.
+4. Hash the payload to generate a digest and validate it to check if it matches the criteria. The check is implemented as a leading-zero-bit test: the first `<difficulty>` bits of the digest must all be zero.
 5. If the digest meets the criteria, "mask" `random_buffer` by setting `random_buffer[i]` to `random_buffer[i] ^ mask[i % 20]` for every integer `i` in `[0, 64)`; otherwise repeat step 1. The masked array is the result sent by the client in the opcode 5/10 packet, such as this one shown below:
 
 ```js
