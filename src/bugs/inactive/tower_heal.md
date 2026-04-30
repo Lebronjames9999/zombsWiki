@@ -2,7 +2,7 @@
 
 ## Phenomenon
 
-If you sent an RPC for the `HealTowersSpell` but with a different tier, there would be various effects:
+If you sent an RPC for `HealTowersSpell` but with a different tier, there would be various effects:
 | Tier | Effect |
 | :--- | :--- |
 | 9 | Instantly heal every tower (Arrow, Cannon, Mage, Melee, Bomb) near you with no cost and no timeout. |
@@ -12,9 +12,7 @@ If you sent an RPC for the `HealTowersSpell` but with a different tier, there wo
 
 ## Cause
 
-The reason the tower heal bug worked was because of the low level language that the game is made in. The data type that was meant to be in the tier is capped at 8, therefore anything in that limit works normally and anything over that breaches other parts of the server. If the tier was in a list of specific numbers, the leakage would affect other things like cost, radius, any many others. A tier being too high would cause total failure in the server.
-
-Credits: [Apex](https://www.youtube.com/@Apex-ti1dm)
+"The reason the tower heal bug worked was because of the low level language that the game is made in. The data type that was meant to be in the tier is capped at 8, therefore anything in that limit works normally and anything over that breaches other parts of the server. If the tier was in a list of specific numbers, the leakage would affect other things like cost, radius, any many others. A tier being too high would cause total failure in the server." - explains a community member, [Apex](https://www.youtube.com/@Apex-ti1dm).
 
 ## Examples
 
@@ -37,6 +35,6 @@ Credits: [Apex](https://www.youtube.com/@Apex-ti1dm)
 ## Changelog
 
 ### May 7, 2019 - Minor Update
-```
----> Fix healing spell invulnerability bug <---
+```md{1}
+- Fix healing spell invulnerability bug
 ```

@@ -126,10 +126,10 @@ This was used as a way to ruin someone's wave or score attempt, or simply just t
 
 ## Changelog
 ### August 23, 2021 - Minor Update
-```
+```md{3}
 - Extend hostility detection to work on individual players to stop scripts that start new partys and kick themselves to undo the old hostility detection
 - Fix one method of pet invulnerability
----> Zombie day time damage is now based on % of max health instead of % of current health to fix max tier walls + low level waves from lagging out the server <---
+- Zombie day time damage is now based on % of max health instead of % of current health to fix max tier walls + low level waves from lagging out the server
 - Lower party change cooldown to 1 second from 15 seconds because the disconnection exploit has been fixed for a while now
 - Remove cooldowns for open party toggle and party names because the disconnection exploit has been fixed for a while now
 ```

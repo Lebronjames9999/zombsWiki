@@ -161,6 +161,10 @@ export default defineConfig({
                 text: "Odd Zombie Spawning",
                 link: "/bugs/active/odd_zombie_spawn.md",
               },
+              {
+                text: "Minor Bugs",
+                link: "/bugs/active/minor_bugs.md",
+              },
             ],
             collapsed: true,
           },
@@ -183,8 +187,28 @@ export default defineConfig({
                 link: "/bugs/inactive/undying_zombs.md",
               },
               {
+                text: "Minor Bugs",
+                link: "/bugs/inactive/minor_bugs.md",
+              },
+            ],
+            collapsed: true,
+          },
+        ],
+      },
+      {
+        text: "Exploits",
+        items: [
+          { text: "Active Exploits", items: [], collapsed: true },
+          {
+            text: "Inactive / Patched Exploits",
+            items: [
+              {
                 text: "Skill Points",
-                link: "/bugs/inactive/skill_point.md",
+                link: "/exploit/inactive/skill_point.md",
+              },
+              {
+                text: "Speed Pets",
+                link: "/exploit/inactive/pet_olympics.md",
               },
             ],
             collapsed: true,

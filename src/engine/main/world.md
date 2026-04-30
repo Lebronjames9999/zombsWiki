@@ -5,7 +5,7 @@ The `World` class is responsible for managing the game world state, including al
 
 ## `World` <Badge type="tip" text="public" />
 
-Bounded to `game` as `game.world`. Alias: `game.worldType`
+Alias: `game.worldType`
 
 ### Properties
 
@@ -419,7 +419,7 @@ Returns `true` when `equalTimes >= 8`, indicating the renderer has been stalled 
 
 ## Game/`World` <Badge type="danger" text="private" />
 
-Extends `World`.
+Extends `World`. Bounded to `game` as `game.world`.
 
 The **game-specific** world subclass that adds ground rendering and an `EntityGrid` spatial index on top of the base engine world. On entering the world, it creates the ground and border grass textures and attaches them to the renderer. Entity lifecycle methods are overridden to keep the `EntityGrid` in sync.
 
