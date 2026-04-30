@@ -38,7 +38,7 @@ The debug overlay displays the following metrics gathered from the engine:
 ```ts
 function init(): void
 ```
-Initializes the debug system. Creates the HTML HUD element, configures the `stats.js` overlay, and attaches listeners to the renderer tick and keyboard input.
+Is called when the website loads. Initializes the debug system. Creates the HTML HUD element, configures the `stats.js` overlay, and attaches listeners to the renderer tick and keyboard input.
 
 #### `begin()`
 ```ts

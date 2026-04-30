@@ -50,6 +50,7 @@ export default defineConfig({
         text: "Engine",
         items: [
           { text: "Overview", link: "/engine/overview" },
+          { text: "game", link: "/engine/game" },
           {
             text: "Main Components",
             items: [

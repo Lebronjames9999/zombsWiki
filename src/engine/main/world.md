@@ -416,3 +416,57 @@ Increments `equalTimes` if `shiftedGameTime` has not changed since the last chec
 function isRendererPaused(): boolean
 ```
 Returns `true` when `equalTimes >= 8`, indicating the renderer has been stalled for at least 8 consecutive frames.
+
+## Game/`World` <Badge type="danger" text="private" />
+
+Extends `World`.
+
+The **game-specific** world subclass that adds ground rendering and an `EntityGrid` spatial index on top of the base engine world. On entering the world, it creates the ground and border grass textures and attaches them to the renderer. Entity lifecycle methods are overridden to keep the `EntityGrid` in sync.
+
+### Properties
+
+| Name | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `isInitialized` | `boolean` | `false` | Guards the ground texture setup so it only runs once. |
+| `entityGrid` | `EntityGrid` | — | Spatial grid for fast entity lookups, created on entering the world with a cell size of `48`. |
+
+### Methods
+
+#### `init()`
+```ts
+function init(): void
+```
+Calls the parent `World.init()`, then registers a network `EnterWorld` handler that builds the ground layer. The handler creates a `GroundEntity` with two `SpriteEntity` grass-texture attachments:
+
+| Attachment | Position | Size | Notes |
+| :--- | :--- | :--- | :--- |
+| Border texture | `(-960, -960)` | `width + 1920` × `height + 1920` | Alpha set to `0.75`. Extends 20 tiles beyond the world bounds on every side. |
+| Grass texture | `(0, 0)` | `width` × `height` | Covers the playable area. |
+
+::: info
+The handler exits early if `data.allowed` is `false` or `isInitialized` is already `true`, preventing duplicate ground layers.
+:::
+
+#### `onEnterWorld()`
+```ts
+function onEnterWorld(data: ENTER_WORLD_DATA): void
+```
+Calls the parent `World.onEnterWorld()`, then creates the `EntityGrid` with the world's `width`, `height`, and a cell size of `48`.
+
+#### `createEntity()`
+```ts
+function createEntity(data: ENTITY_DATA): void
+```
+Calls the parent `World.createEntity()`, then adds the new entity to the `EntityGrid`.
+
+#### `updateEntity()`
+```ts
+function updateEntity(uid: string, data: ENTITY_DATA): void
+```
+Calls the parent `World.updateEntity()`, then updates the entity's position in the `EntityGrid`.
+
+#### `removeEntity()`
+```ts
+function removeEntity(uid: string): void
+```
+Calls the parent `World.removeEntity()`, then removes the entity from the `EntityGrid` by its numeric UID.
