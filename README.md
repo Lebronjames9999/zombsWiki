@@ -158,15 +158,18 @@ src/
 │   │   │   │   ├── NetworkEntity.md
 │   │   │   │   ├── SpriteEntity.md
 │   │   │   │   └── TextEntity.md
-│   │   │   ├── EntityGrid.md
 │   │   │   └── renderer.md
 │   │   ├── ui
 │   │   │   ├── components
 │   │   │   │   ├── UiChat.md
 │   │   │   │   └── UiComponent.md
 │   │   │   └── ui.md
-│   │   ├── network.md
-│   │   └── world.md
+│   │   ├── world
+│   │   │   ├── entityGrid.md
+│   │   │   ├── localPlayer.md
+│   │   │   ├── replicator.md
+│   │   │   └── world.md
+│   │   └── network.md
 │   ├── utils
 │   │   ├── assetManager.md
 │   │   ├── debug.md
