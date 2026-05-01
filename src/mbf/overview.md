@@ -98,7 +98,7 @@ These hash functions resemble that of the original SHA-1 function, but with diff
 
 ## PoW Loop
 
-In order to solve the PoW challenge, the client has to repeatedly change and hash the `payload` until one whose hash value matches the given criteria is found. The payload is an array that can be split into 3 parts: the server's IPv4 in the form of a string (without the null terminator `\0`), `blend_field` and a 64-byte `random_buffer`.  
+In order to solve the PoW challenge, the client has to repeatedly change and hash the `payload` until one whose hash value matches the given criteria is found. The payload is an array that can be split into 3 parts: the server's IPv4 address as a string (without the null terminator `\0`), `blend_field`, and a 64-byte `random_buffer`.  
 The PRNG used in the loop is the standard C++ [MT19937](https://en.wikipedia.org/wiki/Mersenne_Twister) generator paired with [`std::uniform_int_distribution`](https://cplusplus.com/reference/random/uniform_int_distribution/). The seed of the PRNG is obtained from calling `performance.now()` in JavaScript through Emscripten features.
 
 The steps are described below (every array is a 0-indexed byte array):
@@ -106,10 +106,7 @@ The steps are described below (every array is a 0-indexed byte array):
 1. Randomly choose 2 bytes in the random pool and swap them.
 2. Pick another byte in the pool randomly and insert it into a random position of `random_buffer`.
 3. Set `random_buffer[10/11/12/13]` to `random_buffer[0/40/51/4] + random_buffer[23/25/50/45] + uid[0/1/2/3]` (`uid` is the player's uid expressed in a 32-bit integer) and `random_buffer[14/15/16/17]` to `random_buffer[41/22/35/39] ^ blend_field[0/1/2/3]`.
-4. Hash the payload to generate a digest and validate it to confirm if it matches the criteria. The criteria are given by the following statement:
-
-> If the difficulty is `N`, then for every integer `i` in `[0, N)`, there is `(digest[i >> 3] << (i & 7)) & 128 == 0`.
-
+4. Hash the payload to generate a digest and validate it to check if it matches the criteria. The check is implemented as a leading-zero-bit test: the first `<difficulty>` bits of the digest must all be zero.
 5. If the digest meets the criteria, "mask" `random_buffer` by setting `random_buffer[i]` to `random_buffer[i] ^ mask[i % 20]` for every integer `i` in `[0, 64)`; otherwise repeat step 1. The masked array is the result sent by the client in the opcode 5/10 packet, such as this one shown below:
 
 ```js
