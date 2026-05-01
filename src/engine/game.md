@@ -155,7 +155,7 @@ The **game-specific** subclass that configures zombs.io on top of the base engin
 
 ::: info
 
-`options` is a dynamic data that is defined by the website. It's structure is documented in [Data Interfaces](#data-interfaces).
+`options` is a dynamic data that is defined by the website. Its structure is documented in [Data Interfaces](#data-interfaces).
 
 :::
 

@@ -29,6 +29,10 @@ zombsWiki/
 
 ## Documentation Format
 
+### Important Formatting Guidelines
+- Do not use `---` to seperate each section.
+- With every new page you create, add the page to the sidebar in `.vitepress/config.mts` if the user haven't already.
+
 ### Engine Documentation Format
 
 The following page format is recommended, but not obligated as it does not handle edge cases.

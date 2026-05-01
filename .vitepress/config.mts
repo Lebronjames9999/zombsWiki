@@ -119,6 +119,104 @@ export default defineConfig({
                     ],
                     collapsed: true,
                   },
+                  {
+                    text: "Entity Models",
+                    items: [
+                      {
+                        text: "TowerModel",
+                        link: "/engine/main/renderer/entity_models/TowerModel",
+                      },
+                      {
+                        text: "WallModel",
+                        link: "/engine/main/renderer/entity_models/WallModel",
+                      },
+                      {
+                        text: "DoorModel",
+                        link: "/engine/main/renderer/entity_models/DoorModel",
+                      },
+                      {
+                        text: "SlowTrapModel",
+                        link: "/engine/main/renderer/entity_models/SlowTrapModel",
+                      },
+                      {
+                        text: "ArrowTowerModel",
+                        link: "/engine/main/renderer/entity_models/ArrowTowerModel",
+                      },
+                      {
+                        text: "CannonTowerModel",
+                        link: "/engine/main/renderer/entity_models/CannonTowerModel",
+                      },
+                      {
+                        text: "MeleeTowerModel",
+                        link: "/engine/main/renderer/entity_models/MeleeTowerModel",
+                      },
+                      {
+                        text: "BombTowerModel",
+                        link: "/engine/main/renderer/entity_models/BombTowerModel",
+                      },
+                      {
+                        text: "MageTowerModel",
+                        link: "/engine/main/renderer/entity_models/MageTowerModel",
+                      },
+                      {
+                        text: "GoldMineModel",
+                        link: "/engine/main/renderer/entity_models/GoldMineModel",
+                      },
+                      {
+                        text: "HarvesterModel",
+                        link: "/engine/main/renderer/entity_models/HarvesterModel",
+                      },
+                      {
+                        text: "GoldStashModel",
+                        link: "/engine/main/renderer/entity_models/GoldStashModel",
+                      },
+                      {
+                        text: "CharacterModel",
+                        link: "/engine/main/renderer/entity_models/CharacterModel",
+                      },
+                      {
+                        text: "PlayerModel",
+                        link: "/engine/main/renderer/entity_models/PlayerModel",
+                      },
+                      {
+                        text: "HealthBar",
+                        link: "/engine/main/renderer/entity_models/HealthBar",
+                      },
+                      {
+                        text: "ShieldBar",
+                        link: "/engine/main/renderer/entity_models/ShieldBar",
+                      },
+                      {
+                        text: "ExperienceBar",
+                        link: "/engine/main/renderer/entity_models/ExperienceBar",
+                      },
+                      {
+                        text: "ZombieModel",
+                        link: "/engine/main/renderer/entity_models/ZombieModel",
+                      },
+                      {
+                        text: "ZombieBossModel",
+                        link: "/engine/main/renderer/entity_models/ZombieBossModel",
+                      },
+                      {
+                        text: "ZombieRangedModel",
+                        link: "/engine/main/renderer/entity_models/ZombieRangedModel",
+                      },
+                      {
+                        text: "HealTowersSpellModel",
+                        link: "/engine/main/renderer/entity_models/HealTowersSpellModel",
+                      },
+                      {
+                        text: "PlacementIndicatorModel",
+                        link: "/engine/main/renderer/entity_models/PlacementIndicatorModel",
+                      },
+                      {
+                        text: "RangeIndicatorModel",
+                        link: "/engine/main/renderer/entity_models/RangeIndicatorModel",
+                      },
+                    ],
+                    collapsed: true,
+                  },
                 ],
                 collapsed: true,
               },
