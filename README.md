@@ -170,8 +170,6 @@ src/
 │   │   │   ├── replicator.md
 │   │   │   └── world.md
 │   │   └── network.md
-│   ├── quirks
-│   │   └── dc_triggers.md
 │   ├── utils
 │   │   ├── assetManager.md
 │   │   ├── debug.md
@@ -183,29 +181,32 @@ src/
 │   ├── overview.md
 │   └── schema.md
 ├── exploit
-│   └── inactive
-│       ├── pet_olympics.md
-│       └── skill_point.md
+│   ├── inactive
+│   │   ├── pet_olympics.md
+│   │   └── skill_point.md
+│   └── overview.md
 ├── game
-│   └── buildings
-│       ├── arrow_tower.md
-│       ├── bomb_tower.md
-│       ├── buildings.md
-│       ├── cannon_tower.md
-│       ├── door.md
-│       ├── gold_mine.md
-│       ├── gold_stash.md
-│       ├── harvester.md
-│       ├── mage_tower.md
-│       ├── melee_tower.md
-│       ├── slow_trap.md
-│       └── wall.md
-├── intro
+│   ├── buildings
+│   │   ├── arrow_tower.md
+│   │   ├── bomb_tower.md
+│   │   ├── buildings.md
+│   │   ├── cannon_tower.md
+│   │   ├── door.md
+│   │   ├── gold_mine.md
+│   │   ├── gold_stash.md
+│   │   ├── harvester.md
+│   │   ├── mage_tower.md
+│   │   ├── melee_tower.md
+│   │   ├── slow_trap.md
+│   │   └── wall.md
 │   └── introduction.md
 ├── mbf
 │   └── overview.md
 ├── misc
 │   └── records.md
+├── scripts
+│   └── fundamentals
+│       └── dc_triggers.md
 └── index.md
 ```
 
