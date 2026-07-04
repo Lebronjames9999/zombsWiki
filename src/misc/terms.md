@@ -9,7 +9,7 @@ As a community, people are bound to create terms to refer to familiar concepts. 
 | SPW | Score Per Wave | The score that each player earns / all players in a party earn after a wave of zombies. |
 | Env | Environmental Base | A base that depends on the resources (environment) around it to survive. |
 | Stash | Gold Stash | Self-explanatory. |
-| Server ID | - | Refers to the 5 character long ID that uniquely identifies a game server(e.g. v4002, v3001). |
+| Server ID | - | Refers to the 5 character long ID that uniquely identifies a game server (e.g. v4002, v3001). |
 | PSK | Party Share Key | Refers to a string of characters that can be used to invite players into a party. |
 
 ## Scripting Terms
